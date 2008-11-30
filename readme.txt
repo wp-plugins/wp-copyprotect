@@ -4,7 +4,7 @@ Donate link: http://www.thechetan.com/
 Tags: post, posts, copy, protect, right, click, disable, copyprotect
 Requires at least: 2.5
 Tested up to: 2.6.5
-Stable tag: 1.0
+Stable tag: 1.1
 
 Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
 
