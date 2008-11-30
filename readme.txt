@@ -10,8 +10,13 @@ Protect your blog content from being copied. A simple plug-in developed to stop 
 
 == Description ==
 
-This plug-in will disable right click on your blog , it will also disable selection of text in your site
-NOTE: Please do not use this plug-in if you provide any type of copy paste codes on your blogs
+Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
+
+This plug-in will disable right click on your blog , it will also disable selection of text in your site so that no one can copy and paste your content in there blog.
+
+By [Chetan Gole](http://www.thechetan.com/).
+
+
 
 == Installation ==
 
@@ -23,11 +28,11 @@ NOTE: Please do not use this plug-in if you provide any type of copy paste codes
 
 = I've a problem. Where can I get help? =
 
-Please post your messages to <a href="http://www.thechetan.com/wp-copyprotect">WP-Protect home page</a>
+Please post your messages to <a href="http://www.thechetan.com/wp-copyprotect">WP-CopyProtect home page</a>
 
 = Is it wp_2.6.x compatible? =
 
 Of course it is!
 
 == Screenshots ==
-<img src="http://i34.tinypic.com/2sblqv6.jpg" /><br />Configuration Page
+1. Configuration page
