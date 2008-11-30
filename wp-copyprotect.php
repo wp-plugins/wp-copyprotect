@@ -154,7 +154,7 @@ function CopyProtect_options_page()
 		</table>
 		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save" /></p>
 		<h2>Any Problems ?? </h2>
-			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/">http://www.thechetan.com/wp-copyprotect/</a></p>
+			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/">TheChetan.com/wp-copyprotect/</a></p>
 		</fieldset>
 	</form>
 	</div>
