@@ -32,7 +32,7 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 <!--
 
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect visit TheChetan.com/wp-copyprotect for more details
+*Copyprotection for this site is provided by WP-CopyProtect visit TheChetan.com/wp-copyprotect/ for more details
 *RightClick Disabled, Please DO NOT COPY.
 ***************************************************************************************************************/
 
@@ -80,7 +80,7 @@ function CopyProtect_no_select()
 <script type="text/javascript">
 
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect visit TheChetan.com/wp-copyprotect for more details
+*Copyprotection for this site is provided by WP-CopyProtect visit TheChetan.com/wp-copyprotect/ for more details
 *Selection Disabled, Please DO NOT COPY.
 ***************************************************************************************************************/
 
@@ -121,7 +121,7 @@ function CopyProtect_options_page()
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
 		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
 
-		echo '<div class="updated"><p>Commands accepted. Options saved successfully.</p></div>';
+		echo '<div class="updated"><p>Commands accepted</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
@@ -130,7 +130,8 @@ function CopyProtect_options_page()
 	<h2>WP-CopyProtect Options</h2>
 	<form method="post" id="CopyProtect_options">
 		<fieldset class="options">
-		<legend>Now, its the time to bang the copy cats, select your options below</legend>
+		<legend>Now, its the time to bang the copy cats.</legend>
+		<legend>Select the proper options as per your needs</legend>
 		<h2>Options</h2>
 		<table width="100%" cellspacing="2" cellpadding="5" class="editform">
 			
@@ -138,10 +139,10 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable right mouse click:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nrc" name="CopyProtect_nrc" value="CopyProtect_nrc" <?php if($wp_CopyProtect_nrc == true) { echo('checked="checked"'); } ?> />
-				check to activate
+				check to activate (I do not recommand to switch on this option, as above option is sufficient to stop content theft)
 				<br />
 				<input name="CopyProtect_nrc_text" type="text" id="CopyProtect_nrc_text" value="<?php echo get_option('CopyProtect_nrc_text') ;?>" size="30"/>
-				This warning will be given to right clickers.
+				This warning will be given to right clickers in warning box.
 				</td> 
 			</tr>
 			<tr valign="top"> 
@@ -153,7 +154,7 @@ function CopyProtect_options_page()
 			</tr>
 		</table>
 		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save" /></p>
-		<h2>Any Problems ?? </h2>
+		<h2>Any Problems, Suggestion, question .... </h2>
 			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/">TheChetan.com/wp-copyprotect/</a></p>
 		</fieldset>
 	</form>
