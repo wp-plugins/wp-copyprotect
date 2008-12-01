@@ -3,7 +3,7 @@
 Plugin Name: WP-CopyProtect
 Plugin URI: http://www.thechetan.com/wp-copyprotect
 Description: This plug-in will protect your blog content from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 1.2
+Version: 1.4
 Author: Chetan Gole
 Author URI: http://www.thechetan.com/
 */
@@ -121,7 +121,7 @@ function CopyProtect_options_page()
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
 		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
 
-		echo '<div class="updated"><p>Commands accepted</p></div>';
+		echo '<div class="updated"><p>Commands accepted and saved</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');

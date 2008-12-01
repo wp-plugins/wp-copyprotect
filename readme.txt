@@ -4,7 +4,7 @@ Donate link: http://www.thechetan.com/
 Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO
 Requires at least: 2
 Tested up to: 2.6.5
-Stable tag: 1.3
+Stable tag: 1.4
 
 Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
 
@@ -13,6 +13,7 @@ Protect your blog content from being copied. A simple plug-in developed to stop 
 Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
 
 This plug-in will **disable right click** on your blog , it will also **disable selection of text** in your site so that no one can copy and paste your content in there blog.
+
 NOTE: Both *disable right click* and *disable selection of text* can be switch ON or OFF
 
 By [Chetan Gole](http://www.thechetan.com/).
