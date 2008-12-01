@@ -139,7 +139,7 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable right mouse click:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nrc" name="CopyProtect_nrc" value="CopyProtect_nrc" <?php if($wp_CopyProtect_nrc == true) { echo('checked="checked"'); } ?> />
-				check to activate (I do not recommand to switch on this option, as below option is sufficient to stop content theft)
+				check to activate <br />(I do not recommand to switch on this option, as below option is sufficient to stop content theft)
 				<br />
 				<input name="CopyProtect_nrc_text" type="text" id="CopyProtect_nrc_text" value="<?php echo get_option('CopyProtect_nrc_text') ;?>" size="30"/>
 				This warning will be given to right clickers.
@@ -154,10 +154,12 @@ function CopyProtect_options_page()
 			</tr>
 		</table>
 		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save" /></p>
-		<h2>Any Problems, Suggestion, question .... </h2>
-			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">TheChetan.com/wp-copyprotect/</a></p>
-		<h2>Show your copyright</h2>
-		You can use <a href="http://creativecommons.org/license/" target="_blank">Creative Commons lience</a> to show your copyright.
+		<h2>Any Problems, Suggestion, Questions .... </h2>
+			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank"> TheChetan.com/wp-copyprotect/</a></p>
+		<h2>Whats next ?</h2>
+		<p>Why don't you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
+		<h3>Thank you</h3>
+		Plug in developed by <a href="http://www.thechetan.com/" target="_blank">Chetan Gole</a>.
 		</fieldset>
 	</form>
 	</div>
