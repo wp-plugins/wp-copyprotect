@@ -3,7 +3,7 @@
 Plugin Name: WP-CopyProtect
 Plugin URI: http://www.thechetan.com/wp-copyprotect
 Description: This plug-in will protect your blog content from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 1.1
+Version: 1.2
 Author: Chetan Gole
 Author URI: http://www.thechetan.com/
 */
@@ -139,10 +139,10 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable right mouse click:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nrc" name="CopyProtect_nrc" value="CopyProtect_nrc" <?php if($wp_CopyProtect_nrc == true) { echo('checked="checked"'); } ?> />
-				check to activate (I do not recommand to switch on this option, as above option is sufficient to stop content theft)
+				check to activate (I do not recommand to switch on this option, as below option is sufficient to stop content theft)
 				<br />
 				<input name="CopyProtect_nrc_text" type="text" id="CopyProtect_nrc_text" value="<?php echo get_option('CopyProtect_nrc_text') ;?>" size="30"/>
-				This warning will be given to right clickers in warning box.
+				This warning will be given to right clickers.
 				</td> 
 			</tr>
 			<tr valign="top"> 
@@ -155,7 +155,9 @@ function CopyProtect_options_page()
 		</table>
 		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save" /></p>
 		<h2>Any Problems, Suggestion, question .... </h2>
-			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/">TheChetan.com/wp-copyprotect/</a></p>
+			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">TheChetan.com/wp-copyprotect/</a></p>
+		<h2>Show your copyright</h2>
+		You can use <a href="http://creativecommons.org/license/" target="_blank">Creative Commons lience</a> to show your copyright.
 		</fieldset>
 	</form>
 	</div>
