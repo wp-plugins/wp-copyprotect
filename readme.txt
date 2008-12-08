@@ -19,7 +19,7 @@ So that no one can simply copy and paste the content of your blog in there blog 
 
 NOTE: Both *disable right click* and *disable selection of text* can be switch ON or OFF through *Settings* menu.
 
-Latest release 1.5 : Minor bug fixed, few options added, info added.
+Latest release 1.5 : Minor bug fixed, info added.
 
 By [Chetan Gole](http://www.thechetan.com/).
 
