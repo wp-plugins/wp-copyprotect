@@ -4,7 +4,7 @@ Donate link: http://www.thechetan.com/
 Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO
 Requires at least: 2
 Tested up to: 2.6.5
-Stable tag: 1.3
+Stable tag: 1.5
 
 Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
 
@@ -27,17 +27,13 @@ By [Chetan Gole](http://www.thechetan.com/).
 
 == Frequently Asked Questions ==
 
-= I've a problem. Where can I get help? =
-
-Please post your messages to <a href="http://www.thechetan.com/wp-copyprotect">WP-CopyProtect</a> Home page.
-
 = Is it wp_2.6.x compatible? =
 
 Of course it is!
 
 = Why Disable content selection is not working ? =
 
-Actually your theme doesn't have `< ?php wp_footer(); ?>` in footer, so please edit the footer of your theme and insert that code. The "disable Content selection" will start working.
+Actually your theme doesn't have `<?php wp_footer(); ?>` in footer, so please edit the footer of your theme and insert that code. The "disable Content selection" will start working.
 
 == Screenshots ==
 1. Configuration page
