@@ -23,7 +23,7 @@ By [Chetan Gole](http://www.thechetan.com/).
 
 1. Upload `wp-copyprotect.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to Settings and then WP-CopyProtect to configure.
+3. Go to **Settings** and then **WP-CopyProtect** to configure and enable.
 
 == Frequently Asked Questions ==
 
