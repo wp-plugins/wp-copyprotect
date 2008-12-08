@@ -109,15 +109,6 @@ function CopyProtect_no_select_footer()
 disableSelection(document.body) //disable text selection on entire body of page
 </script>
 
-<?php
-}
-
-
-// adds button in Footer
-function CopyProtect_button()
-{
-?>
-
 <small>CopyProtected by <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> Thanks to <a href="http://www.thechetan.com/" target="_blank">Chetan</a>.</small>
 
 <?php
@@ -131,13 +122,11 @@ function CopyProtect_options_page()
 		update_option('CopyProtect_nrc',$_POST['CopyProtect_nrc']);
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
 		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
-		update_option('CopyProtect_button',$_POST['CopyProtect_button']);
 
 		echo '<div class="updated"><p>Commands accepted</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
-	$wp_CopyProtect_button = get_option('CopyProtect_button');	
 	?>
 	<div class="wrap">
 	
@@ -164,13 +153,7 @@ function CopyProtect_options_page()
 				check to activate.
 				</td> 
 			</tr>
-			<tr valign="top"> 
-				<th width="33%" scope="row">Proudly show :</th> 
-				<td>
-				<input type="checkbox" id="CopyProtect_button" name="CopyProtect_button" value="CopyProtect_button" checked="checked" <?php if($wp_CopyProtect_button == true) { echo('checked="checked"'); } ?> />
-				check to activate (Proudly show that this page is protected from Copy cats) 
-				</td> 
-			</tr>
+			
 		<tr>
         <th width="33%" scope="row">Save settings :</th> 
         <td>
@@ -224,10 +207,8 @@ function CopyProtect()
 function CopyProtect_footer()
 {
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
-        $wp_CopyProtect_button = get_option('CopyProtect_button');
 
 	if($wp_CopyProtect_nts == true) { CopyProtect_no_select_footer(); }
-	if($wp_CopyProtect_button == true) { CopyProtect_button(); }	
 }
 
 function CopyProtect_adminmenu()
