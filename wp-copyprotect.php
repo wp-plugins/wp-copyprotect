@@ -118,7 +118,7 @@ function CopyProtect_button()
 {
 ?>
 
-<a href="http://www.thechetan.com/wp-copyprotect/" target="_blank"><img src="http://cchetanonline.googlepages.com/copy-protect.jpeg" alt="Protected by WP-CopyProtect" border="0" /></a>
+<small>CopyProtected by <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> Thanks to <a href="http://www.thechetan.com/" target="_blank">Chetan</a>.</small>
 
 <?php
 }
@@ -169,12 +169,12 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Proudly show :</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_button" name="CopyProtect_button" value="CopyProtect_button" checked="checked" <?php if($wp_CopyProtect_button == true) { echo('checked="checked"'); } ?> />
-				check to activate (Proudly show that this page is protected from Copy cats, adds button at Footer) 
+				check to activate (Proudly show that this page is protected from Copy cats) 
 				</td> 
 			</tr>
 			
 		</table>
-		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save" /></p>
+		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save Settings" /></p>
 		<h2>Whats next ?</h2>
 		<p>Why don't you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
 		
