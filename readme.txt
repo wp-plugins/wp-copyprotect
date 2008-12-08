@@ -12,7 +12,7 @@ Protect your blog content from getting copied. A simple plug-in developed to sto
 
 Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
-== This plug-in will ==
+= This plug-in will =
 * **disable right click** on your blog \*
 * it will also **disable selection of text** \*
 So that no one can simply copy and paste the content of your blog in there blog or site.
