@@ -39,7 +39,9 @@ Of course it is!
 
 = Why Disable content selection is not working ? =
 
-Actually your theme doesn't have `<?php wp_footer(); ?>` in footer, so please edit the footer of your theme and insert that code. The "disable Content selection" will start working.
+Actually your theme doesn't have `<?php wp_footer(); ?>` in footer, so please edit the footer of your theme and insert that code. 
+To edit the theme  go to Design >> Theme Editor >> Select "Footer.php" from right hand list >>  and paste `<?php wp_footer(); ?>` just before the '</body>' tag.
+The "disable Content selection" will start working.
 
 == Screenshots ==
 1. Configuration page
