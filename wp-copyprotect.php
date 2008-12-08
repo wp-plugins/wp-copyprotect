@@ -140,20 +140,19 @@ function CopyProtect_options_page()
 	$wp_CopyProtect_button = get_option('CopyProtect_button');	
 	?>
 	<div class="wrap">
+	
 	<h2>WP-CopyProtect Options</h2>
 	<form method="post" id="CopyProtect_options">
 		<fieldset class="options">
 		<legend>Now, its the time to bang the copy cats.</legend>
 		<legend>Select the proper options as per your needs</legend>
-		<h2>Options</h2>
-		<table width="100%" cellspacing="2" cellpadding="5" class="editform">
+		<table class="form-table">
 			
 			<tr valign="top"> 
 				<th width="33%" scope="row">Disable right mouse click:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nrc" name="CopyProtect_nrc" value="CopyProtect_nrc" <?php if($wp_CopyProtect_nrc == true) { echo('checked="checked"'); } ?> />
-				check to activate <br />(I do not recommand to switch on this option, as below option is sufficient to stop content theft)
-				<br />
+				check to activate <br />
 				<input name="CopyProtect_nrc_text" type="text" id="CopyProtect_nrc_text" value="<?php echo get_option('CopyProtect_nrc_text') ;?>" size="30"/>
 				This warning will be given to right clickers.
 				</td> 
@@ -172,23 +171,37 @@ function CopyProtect_options_page()
 				check to activate (Proudly show that this page is protected from Copy cats) 
 				</td> 
 			</tr>
-			
-		</table>
-		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save Settings" /></p>
+		<tr>
+        <th width="33%" scope="row">Save settings :</th> 
+        <td>
+		<input type="submit" name="CopyProtect_save" value="Save Settings" />
+        </td>
+        </tr>
+		<tr>
+        <th width="33%" scope="row">Please note :</th> 
+        <td>
+		
+This is just a basic copy protect plug-in, if someone want to copy your content he/she can go to source of the blog and can easily copy the stuff from there. 
+Most copy cats use your blogs <a href="/feed/" target="_blank">RSS feeds</a> to steal the content. Always select "Summary" at "For each article in a feed, show" in Wordpress admin panel "<a href="options-reading.php">Reading Settings</a>" so that even if someone try to copy your content from feeds he/she can not copy the whole post.
+		
+		</td>
+        </tr>
+		
+		<tr>
+        <th scope="row" style="text-align:right; vertical-align:top;">
+        <td>
 		<h2>Whats next ?</h2>
 		<p>Why don't you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
+        </td>
+        </tr>
 		
-
-<h3>Please note</h3>
-This is just a basic copy protect plug-in, if someone want to copy your content he/she can go to source of the blog and can easily copy the stuff from there. 
-
-I also recommend you to use <a href="http://www.feedburner.com/">Feedburner</a> for more protection which will protect your feeds. Along with feedburner use <a href="http://www.google.com/support/feedburner/bin/answer.py?answer=78483&topic=13252">Feedsmith</a> plug-in which will redirect all your feed traffic to feedburner only.
-
-Always select "Summary" at "For each article in a feed, show" in Wordpress admin panel "<a href="wp-admin/options-reading.php">Reading Settings</a>" so that even if someone try to copy your content from feeds he can not copy the whole post.
+		
+		</table>
 		<h3>Thank you</h3>
 		Plug in developed by <a href="http://www.thechetan.com/" target="_blank">Chetan Gole</a>.
 		</fieldset>
 	</form>
+	</table>
 	</div>
 	<?php
 }
