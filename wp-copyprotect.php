@@ -150,7 +150,7 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable text selection:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nts" name="CopyProtect_nts" value="CopyProtect_nts" <?php if($wp_CopyProtect_nts == true) { echo('checked="checked"'); } ?> />
-				check to activate.
+				check to activate. <a href="http://wordpress.org/extend/plugins/wp-copyprotect/faq/" target="_blank">Not working ?</a>
 				</td> 
 			</tr>
 			
