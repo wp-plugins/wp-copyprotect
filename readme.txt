@@ -6,16 +6,20 @@ Requires at least: 2
 Tested up to: 2.6.5
 Stable tag: 1.5
 
-Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
+Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
 == Description ==
 
-Protect your blog content from being copied. A simple plug-in developed to stop the Copy cats
+Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
-This plug-in will **disable right click** on your blog , it will also **disable selection of text** in your site so that no one can copy and paste your content in there blog.
+This plug-in will
+* **disable right click** on your blog 
+* it will also **disable selection of text**
+So that no one can simply copy and paste the content of your blog in there blog or site.
+
 NOTE: Both *disable right click* and *disable selection of text* can be switch ON or OFF.
 
-Latest Version 1.5 : Minor bugs fixed, Proud option added, info added.
+Latest release 1.5 : Minor bug fixed, few options added, info added.
 
 By [Chetan Gole](http://www.thechetan.com/).
 
