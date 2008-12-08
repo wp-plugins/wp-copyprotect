@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP-CopyProtect
-Plugin URI: http://www.thechetan.com/wp-copyprotect
+Plugin URI: http://www.thechetan.com/wp-copyprotect/
 Description: This plug-in will protect your blog content from being copied. A simple plug-in developed to stop the Copy cats.
 Version: 1.5
 Author: Chetan Gole
@@ -113,6 +113,17 @@ disableSelection(document.body) //disable text selection on entire body of page
 }
 
 
+// adds button in Footer
+function CopyProtect_button()
+{
+?>
+
+<a href="http://www.thechetan.com/wp-copyprotect/" target="_blank"><img src="http://cchetanonline.googlepages.com/copy-protect.jpeg" alt="Protected by WP-CopyProtect" border="0" /></a>
+
+<?php
+}
+
+
 // Tuning your WP-CopyProtect
 function CopyProtect_options_page()
 {
@@ -120,11 +131,13 @@ function CopyProtect_options_page()
 		update_option('CopyProtect_nrc',$_POST['CopyProtect_nrc']);
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
 		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
+		update_option('CopyProtect_button',$_POST['CopyProtect_button']);
 
-		echo '<div class="updated"><p>Commands accepted and saved</p></div>';
+		echo '<div class="updated"><p>Commands accepted</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
+	$wp_CopyProtect_button = get_option('CopyProtect_button');	
 	?>
 	<div class="wrap">
 	<h2>WP-CopyProtect Options</h2>
@@ -149,15 +162,29 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable text selection:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nts" name="CopyProtect_nts" value="CopyProtect_nts" <?php if($wp_CopyProtect_nts == true) { echo('checked="checked"'); } ?> />
-				check to activate
+				check to activate.
 				</td> 
 			</tr>
+			<tr valign="top"> 
+				<th width="33%" scope="row">Proudly show :</th> 
+				<td>
+				<input type="checkbox" id="CopyProtect_button" name="CopyProtect_button" value="CopyProtect_button" checked="checked" <?php if($wp_CopyProtect_button == true) { echo('checked="checked"'); } ?> />
+				check to activate (Proudly show that this page is protected from Copy cats, adds button at Footer) 
+				</td> 
+			</tr>
+			
 		</table>
 		<p class="submit"><input type="submit" name="CopyProtect_save" value="Save" /></p>
-		<h2>Any Problems, Suggestion, Questions .... </h2>
-			<p> Visit <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank"> TheChetan.com/wp-copyprotect/</a></p>
 		<h2>Whats next ?</h2>
 		<p>Why don't you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
+		
+
+<h3>Please note</h3>
+This is just a basic copy protect plug-in, if someone want to copy your content he/she can go to source of the blog and can easily copy the stuff from there. 
+
+I also recommend you to use <a href="http://www.feedburner.com/">Feedburner</a> for more protection which will protect your feeds. Along with feedburner use <a href="http://www.google.com/support/feedburner/bin/answer.py?answer=78483&topic=13252">Feedsmith</a> plug-in which will redirect all your feed traffic to feedburner only.
+
+Always select "Summary" at "For each article in a feed, show" in Wordpress admin panel "<a href="wp-admin/options-reading.php">Reading Settings</a>" so that even if someone try to copy your content from feeds he can not copy the whole post.
 		<h3>Thank you</h3>
 		Plug in developed by <a href="http://www.thechetan.com/" target="_blank">Chetan Gole</a>.
 		</fieldset>
@@ -173,7 +200,6 @@ function CopyProtect()
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
 	$wp_CopyProtect_nrc_text = get_option('CopyProtect_nrc_text');
-	
 	$pos = strpos(strtolower(getenv("REQUEST_URI")), '?preview=true');
 	
 	if ($pos === false) {
@@ -185,8 +211,10 @@ function CopyProtect()
 function CopyProtect_footer()
 {
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
+        $wp_CopyProtect_button = get_option('CopyProtect_button');
 
 	if($wp_CopyProtect_nts == true) { CopyProtect_no_select_footer(); }
+	if($wp_CopyProtect_button == true) { CopyProtect_button(); }	
 }
 
 function CopyProtect_adminmenu()
