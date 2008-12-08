@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP-CopyProtect
-Plugin URI: http://www.thechetan.com/wp-copyprotect
+Plugin URI: http://www.thechetan.com/wp-copyprotect/
 Description: This plug-in will protect your blog content from being copied. A simple plug-in developed to stop the Copy cats.
 Version: 1.5
 Author: Chetan Gole
