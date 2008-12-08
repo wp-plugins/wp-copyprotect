@@ -33,10 +33,6 @@ By [Chetan Gole](http://www.thechetan.com/).
 
 == Frequently Asked Questions ==
 
-= Is it WP 2.6.x compatible? =
-
-Of course it is!
-
 = Why Disable content selection is not working ? =
 
 Actually your theme doesn't have `<?php wp_footer(); ?>` in footer, so please edit the footer of your theme and insert that code. 
