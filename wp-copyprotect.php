@@ -3,7 +3,7 @@
 Plugin Name: WP-CopyProtect
 Plugin URI: http://www.thechetan.com/wp-copyprotect/
 Description: This plug-in will protect your blog content from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 1.5
+Version: 1.6
 Author: Chetan Gole
 Author URI: http://www.thechetan.com/
 */
@@ -32,7 +32,7 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 <!--
 
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect v1.5 visit TheChetan.com/wp-copyprotect/ for more details
+*Copyprotection for this site is provided by WP-CopyProtect v1.6 visit TheChetan.com/wp-copyprotect/ for more details
 *RightClick Disabled, Please DO NOT COPY.
 ***************************************************************************************************************/
 
@@ -80,7 +80,7 @@ function CopyProtect_no_select()
 <script type="text/javascript">
 
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect v1.5 visit TheChetan.com/wp-copyprotect/ for more details
+*Copyprotection for this site is provided by WP-CopyProtect v1.6 visit TheChetan.com/wp-copyprotect/ for more details
 *Selection Disabled, Please DO NOT COPY.
 ***************************************************************************************************************/
 
@@ -102,15 +102,15 @@ target.style.cursor = "default"
 
 
 // No selection footer 
+// Yes, You can remove this link from footer, but why ?, This plugin is protecting your content, so just donate me a backlink.
+// If you are removing this link please consider adding me in your blogroll or write a post about this plugin.
 function CopyProtect_no_select_footer()
 {
 ?>
 <script type="text/javascript">
 disableSelection(document.body) //disable text selection on entire body of page
 </script>
-
-<small>CopyProtected by <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> Thanks to <a href="http://www.thechetan.com/" target="_blank">Chetan</a>.</small>
-
+<small>Copy Protected by <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> Thanks to <a href="http://www.thechetan.com/" target="_blank">Chetan</a>.</small>
 <?php
 }
 
@@ -150,7 +150,7 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable text selection:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nts" name="CopyProtect_nts" value="CopyProtect_nts" <?php if($wp_CopyProtect_nts == true) { echo('checked="checked"'); } ?> />
-				check to activate. <a href="http://wordpress.org/extend/plugins/wp-copyprotect/faq/" target="_blank">Not working ?</a>
+				check to activate. <a href="http://www.thechetan.com/wp-copyprotect/#kp" target="_blank">Not working ?</a>
 				</td> 
 			</tr>
 			
@@ -173,12 +173,12 @@ Most copy cats use your blogs <a href="/feed/" target="_blank">RSS feeds</a> to 
 		<tr>
         <th scope="row" style="text-align:right; vertical-align:top;">
         <td>
-		<h2>Whats next ?</h2>
+		<h3>Whats next ?</h3>
 		<p>Why don't you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
+		<h3>Problems, Questions, Suggestions ?</h3>
+		<p>Catch me on <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank">WP-CopyProtect Homepage</a></p>
         </td>
         </tr>
-		
-		
 		</table>
 		<h3>Thank you</h3>
 		Plug in developed by <a href="http://www.thechetan.com/" target="_blank">Chetan Gole</a>.
@@ -189,7 +189,7 @@ Most copy cats use your blogs <a href="/feed/" target="_blank">RSS feeds</a> to 
 	<?php
 }
 
-//We are calling you function
+//We are calling you, function
 function CopyProtect()
 {
 
