@@ -3,7 +3,7 @@ Contributors: cchetanonline
 Donate link: http://www.thechetan.com/wp-copyprotect/#donate
 Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin
 Requires at least: 2
-Tested up to: 2.7
+Tested up to: 2.7.1
 Stable tag: 1.6
 
 Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
