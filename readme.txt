@@ -1,10 +1,10 @@
 === WP-CopyProtect ===
 Contributors: cchetanonline
 Donate link: http://www.thechetan.com/wp-copyprotect/#donate
-Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin
+Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security
 Requires at least: 2
-Tested up to: 2.7.1
-Stable tag: 1.7
+Tested up to: 2.8
+Stable tag: 1.8
 
 Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
@@ -20,7 +20,7 @@ So that no one can simply copy and paste the content of your blog in there blog 
 NOTE: Both *disable right click* and *disable selection of text* can be switch ON or OFF through *Settings* menu.
 You must enable the options from settings page after installing it to enable the protection.
 
-*Latest* release 1.7 : Some validations added.
+*Latest* release 1.8 : Optimised for WP 2.8
 
 By [Chetan Gole](http://www.thechetan.com/).
 
