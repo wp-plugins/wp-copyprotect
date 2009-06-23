@@ -13,17 +13,19 @@ Protect your blog content from getting copied. A simple plug-in developed to sto
 Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
 = This plug-in will =
+* **Disable selection of text** 
 * **Disable right click** on your blog 
-* it will also **Disable selection of text** 
+
 So that no one can simply copy and paste the content of your blog in there blog or site.
 
 = Please note = 
 * Both *disable right click* and *disable selection of text* can be switch ON or OFF through *Settings* menu.
-* **You must enable the options from WP-CopyProtect settings page after installing the plugin, to enable the protection to your blog.**
+* **You must enable the options** from WP-CopyProtect settings page after installing the plugin, to enable the protection to your blog.
+
+ Why dont you rate the plugin if you like it !! :)  >> 
 
 *Latest* release 1.9 : VALID XHTML (Validation errors removed)
 
-** Why dont you rate the plugin if you like it !! :) **
 
 By [Chetan Gole](http://www.thechetan.com/).
 
