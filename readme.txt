@@ -35,11 +35,6 @@ By [Chetan Gole](http://www.thechetan.com/).
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to **Settings** and then **WP-CopyProtect** to configure and enable.
 
-== Change Log ==
-* ver : 1.9 : VALID XHTML (Validation errors removed) + change log added.
-* ver : 1.8 : Update for Wordpress 2.8 with change in settng page.
-
-
 == Frequently Asked Questions ==
 
 = Why Disable content selection is not working ? =
@@ -55,3 +50,7 @@ Catch me on [Wp-CopyProtect Homepage](http://www.thechetan.com/wp-copyprotect/)
 
 == Screenshots ==
 1. Configuration page
+
+== Change Log ==
+* ver : 1.9 : VALID XHTML (Validation errors removed).
+* ver : 1.8 : Update for Wordpress 2.8 with change in settng page.
