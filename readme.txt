@@ -1,10 +1,10 @@
-=== WP-CopyProtect ===
+=== WP-CopyProtect [Protect your posts] ===
 Contributors: cchetanonline
 Donate link: http://www.thechetan.com/wp-copyprotect/#donate
-Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security
+Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security, wp-copyprotect, RSS, fetcher, duplicate,
 Requires at least: 2
 Tested up to: 2.8
-Stable tag: 1.8
+Stable tag: 1.9
 
 Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
@@ -17,10 +17,13 @@ Protect your blog content from getting copied. A simple plug-in developed to sto
 * it will also **Disable selection of text** 
 So that no one can simply copy and paste the content of your blog in there blog or site.
 
-NOTE: Both *disable right click* and *disable selection of text* can be switch ON or OFF through *Settings* menu.
-You must enable the options from settings page after installing it to enable the protection.
+= Please note = 
+* Both *disable right click* and *disable selection of text* can be switch ON or OFF through *Settings* menu.
+* **You must enable the options from WP-CopyProtect settings page after installing the plugin, to enable the protection to your blog.**
 
-*Latest* release 1.8 : Optimised for WP 2.8
+*Latest* release 1.9 : VALID XHTML (Validation errors removed)
+
+** Why dont you rate the plugin if you like it !! :) **
 
 By [Chetan Gole](http://www.thechetan.com/).
 
@@ -29,6 +32,11 @@ By [Chetan Gole](http://www.thechetan.com/).
 1. Upload `wp-copyprotect.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to **Settings** and then **WP-CopyProtect** to configure and enable.
+
+== Change Log ==
+* ver : 1.9 : VALID XHTML (Validation errors removed) + change log added.
+* ver : 1.8 : Update for Wordpress 2.8 with change in settng page.
+
 
 == Frequently Asked Questions ==
 

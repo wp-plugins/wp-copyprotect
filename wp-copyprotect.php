@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: WP-CopyProtect
+Plugin Name: WP-CopyProtect [Protect your posts]
 Plugin URI: http://www.thechetan.com/wp-copyprotect/
-Description: This plug-in will protect your blog content from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 1.8
+Description: This plug-in will protect your blog content [posts] from being copied. A simple plug-in developed to stop the Copy cats.
+Version: 1.9
 Author: Chetan Gole
 Author URI: http://www.thechetan.com/
 */
@@ -28,11 +28,11 @@ GNU General Public License for more details: http://www.gnu.org/licenses/gpl.txt
 function CopyProtect_no_right_click($CopyProtect_click_message)
 {
 ?>
-<script language=JavaScript>
+<script type="text/javascript">
 <!--
 
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect v1.8 visit www.TheChetan.com/wp-copyprotect/ for more details
+*Copyprotection for this site is provided by WP-CopyProtect v1.9 visit www.TheChetan.com/wp-copyprotect/ for more details
 *RightClick Disabled, Please DO NOT COPY.
 ***************************************************************************************************************/
 
@@ -77,7 +77,7 @@ function CopyProtect_no_select()
 ?>
 <script type="text/javascript">
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect v1.8 visit www.TheChetan.com/wp-copyprotect/ for more details
+*Copyprotection for this site is provided by WP-CopyProtect v1.9 visit www.TheChetan.com/wp-copyprotect/ for more details
 *Selection Disabled, Please DO NOT COPY.
 **************************************************************************************************************/
 function disableSelection(target){
@@ -123,7 +123,7 @@ function CopyProtect_options_page()
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
 	?>
 	<div class="wrap">
-	<h1>WP-CopyProtect</h1> ver. 1.8
+	<h1>WP-CopyProtect</h1> ver. 1.9
 	| <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank" title="Visit homepage of wordpress plugin WP-CopyProtect">Visit Plugin page</a> | <a href="http://www.thechetan.com/wp-copyprotect/#donate" target="_blank" title="Donate some amount to WP-CopyProtect plugin developer to help him to develope more such plugins">Donate</a> | <a href="http://www.thechetan.com/wp-copyprotect/#donors" target="_blank" title="Few power donors,special thanks to them">Power Donors</a> | 
 	<h2>WP-CopyProtect Options</h2>
 	<form method="post" id="CopyProtect_options">
