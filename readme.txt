@@ -24,7 +24,7 @@ So that no one can simply copy and paste the content of your blog in there blog 
 
  Why dont you rate the plugin if you like it !! :)  >> 
 
-*Latest* release 1.9 : VALID XHTML (Validation errors removed)
+** *Latest* release 1.9 : VALID XHTML (Validation errors removed) **
 
 
 By [Chetan Gole](http://www.thechetan.com/).
