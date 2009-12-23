@@ -9,7 +9,7 @@ Author URI: http://www.thechetan.com/
 */
 
 /*
-Copyright 2008  Chetan Gole, IN  (http://www.thechetan.com/)
+Copyright 2009-10  Chetan Gole, IN  (http://www.thechetan.com/)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 <!--
 
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect v1.9 visit www.TheChetan.com/wp-copyprotect/ for more details
+*Copyprotection for this site is provided by WP-CopyProtect v1.9.1 visit www.TheChetan.com/wp-copyprotect/ for more details
 *RightClick Disabled, Please DO NOT COPY.
 ***************************************************************************************************************/
 
@@ -77,7 +77,7 @@ function CopyProtect_no_select()
 ?>
 <script type="text/javascript">
 /***************************************************************************************************************
-*Copyprotection for this site is provided by WP-CopyProtect v1.9 visit www.TheChetan.com/wp-copyprotect/ for more details
+*Copyprotection for this site is provided by WP-CopyProtect v1.9.1 visit www.TheChetan.com/wp-copyprotect/ for more details
 *Selection Disabled, Please DO NOT COPY.
 **************************************************************************************************************/
 function disableSelection(target){
