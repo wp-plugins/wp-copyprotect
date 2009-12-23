@@ -1,7 +1,7 @@
 === WP-CopyProtect [Protect your posts] ===
 Contributors: cchetanonline
 Donate link: http://www.thechetan.com/wp-copyprotect/#donate
-Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security, wp-copyprotect, RSS, fetcher, duplicate,
+Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security, wp-copyprotect, RSS, fetcher, duplicate, Bing, 
 Requires at least: 2
 Tested up to: 2.9
 Stable tag: 1.9.1
