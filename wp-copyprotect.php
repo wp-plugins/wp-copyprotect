@@ -123,7 +123,7 @@ function CopyProtect_options_page()
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
 	?>
 	<div class="wrap">
-	<h1>WP-CopyProtect</h1> ver. 1.9
+	<h1>WP-CopyProtect</h1> ver. 1.9.1
 	| <a href="http://www.thechetan.com/wp-copyprotect/" target="_blank" title="Visit homepage of wordpress plugin WP-CopyProtect">Visit Plugin page</a> | <a href="http://www.thechetan.com/wp-copyprotect/#donate" target="_blank" title="Donate some amount to WP-CopyProtect plugin developer to help him to develope more such plugins">Donate</a> | <a href="http://www.thechetan.com/wp-copyprotect/#donors" target="_blank" title="Few power donors,special thanks to them">Power Donors</a> | 
 	<h2>WP-CopyProtect Options</h2>
 	<form method="post" id="CopyProtect_options">
