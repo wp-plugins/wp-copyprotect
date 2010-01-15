@@ -9,7 +9,7 @@ Author URI: http://www.thechetan.com/
 */
 
 /*
-Copyright 2009-10  Chetan Gole, IN  (http://www.thechetan.com/)
+Copyright 2010  Chetan Gole, IN  (http://www.thechetan.com/)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
