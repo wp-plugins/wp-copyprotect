@@ -3,7 +3,7 @@
 Plugin Name: WP-CopyProtect [Protect your blog posts]
 Plugin URI: http://chetangole.com/blog/wp-copyprotect/
 Description: This plug-in will protect your blog content [posts] from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 2.0.0
+Version: 2.1.0
 Author: Chetan Gole
 Author URI: http://chetangole.com/
 */
@@ -111,23 +111,24 @@ else //All other route (For Opera)
 	target.onmousedown=function(){return false}
 target.style.cursor = "default"
 }
-
 </script>
-
 <?php
 }
 // No selection footer 
-// If you are removing this link please consider adding me in your blogroll or write a post about this plugin.
 function CopyProtect_no_select_footer()
 {
 ?>
 <script type="text/javascript">
 disableSelection(document.body)
 </script>
-<small>Copy Protected by <a href="http://chetangole.com/" target="_blank">Chetan</a>'s <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-Copyprotect</a>.</small>
 <?php
 }
-
+function CopyProtectCredit()
+{
+?>
+<small>Copy Protected by <a href="http://chetangole.com/" target="_blank">Chetan</a>s <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-Copyprotect</a>.</small>
+<?php
+}
 // Tuning your WP-CopyProtect
 function CopyProtect_options_page()
 {
@@ -141,11 +142,13 @@ function CopyProtect_options_page()
 		update_option('CopyProtect_nrc',$_POST['CopyProtect_nrc']);
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
 		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
+		update_option('CopyProtect_credit',$_POST['CopyProtect_credit']);
 
 		echo '<div class="updated"><p>Settings saved</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
+	$wp_CopyProtect_credit = get_option('CopyProtect_credit');
 	?>
 	<form method="post" id="CopyProtect_options">
 		<fieldset class="options">
@@ -168,7 +171,14 @@ function CopyProtect_options_page()
 				<input type="checkbox" id="CopyProtect_nts" name="CopyProtect_nts" value="CopyProtect_nts" <?php if($wp_CopyProtect_nts == true) { echo('checked="checked"'); } ?> />
 				Activate. <a href="http://www.thechetan.com/wp-copyprotect/#kp" target="_blank">Not working ?</a>
 				</td> 
-			</tr>			
+			</tr>	
+			<tr valign="top"> 
+				<th width="33%" scope="row">Display protection information:</th> 
+				<td>
+				<input type="checkbox" id="CopyProtect_credit" name="CopyProtect_credit" value="CopyProtect_credit" <?php if($wp_CopyProtect_credit == true) { echo('checked="checked"'); } ?> />
+				Activate.
+				</td> 
+			</tr>				
 		<tr>
         <th width="33%" scope="row">Save settings :</th> 
         <td>
@@ -199,9 +209,9 @@ function CopyProtect_options_page()
 function CopyProtect()
 {
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
-	$wp_CopyProtect_nrc_wo_msg = get_option('CopyProtect_nrc_wo_msg');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
 	$wp_CopyProtect_nrc_text = get_option('CopyProtect_nrc_text');
+	$wp_CopyProtect_credit = get_option('CopyProtect_credit');
 	$pos = strpos(strtolower(getenv("REQUEST_URI")), '?preview=true');
 	
 	if ($pos === false) {
@@ -214,8 +224,10 @@ function CopyProtect()
 function CopyProtect_footer()
 {
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
+	$wp_CopyProtect_credit = get_option('CopyProtect_credit');
 
 	if($wp_CopyProtect_nts == true) { CopyProtect_no_select_footer(); }
+	if($wp_CopyProtect_credit == true) { CopyProtectCredit(); }
 }
 
 function CopyProtect_adminmenu()
