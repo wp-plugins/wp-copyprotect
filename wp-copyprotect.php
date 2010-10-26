@@ -32,6 +32,9 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 ?>
 <script type="text/javascript">
 <!--
+/*****************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT    ****
+******************************************************************/
 var message="<?php echo $CopyProtect_click_message; ?>";
 function clickIE4(){
 if (event.button==2){
@@ -68,12 +71,14 @@ function CopyProtect_no_right_click_without_message()
 ?>
 <script type="text/javascript">
 <!--
+/*****************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT    ****
+******************************************************************/
 function clickIE4(){
 if (event.button==2){
 return false;
 }
 }
-
 function clickNS4(e){
 if (document.layers||document.getElementById&&!document.all){
 if (e.which==2||e.which==3){
