@@ -3,13 +3,13 @@
 Plugin Name: WP-CopyProtect [Protect your blog posts]
 Plugin URI: http://chetangole.com/blog/wp-copyprotect/
 Description: This plug-in will protect your blog content [posts] from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 2.1.0
+Version: 2.2.0
 Author: Chetan Gole
 Author URI: http://chetangole.com/
 */
 
 /*
-Copyright (C) 2010  Chetan Gole - chetangole.com
+Copyright (C) 2012  Chetan Gole - chetangole.com
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -32,9 +32,9 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 ?>
 <script type="text/javascript">
 <!--
-/*****************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT    ****
-******************************************************************/
+/******************************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 2.2.0 ****
+******************************************************************************/
 var message="<?php echo $CopyProtect_click_message; ?>";
 function clickIE4(){
 if (event.button==2){
@@ -71,9 +71,9 @@ function CopyProtect_no_right_click_without_message()
 ?>
 <script type="text/javascript">
 <!--
-/*****************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT    ****
-******************************************************************/
+/******************************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 2.2.0 ****
+******************************************************************************/
 function clickIE4(){
 if (event.button==2){
 return false;
@@ -139,8 +139,8 @@ function CopyProtect_options_page()
 {
 ?>
 <div class="wrap">
-	<h1>WP-CopyProtect <font size="2">ver 2.0.0</font></h1> 
-	| <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank" title="Visit homepage of wordpress plugin WP-CopyProtect">Visit Plugin page</a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donate" target="_blank" title="Donate some amount to WP-CopyProtect plugin developer to help him to develope more such plugins">Donate</a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donors" target="_blank" title="Few power donors,special thanks to them">Power Donors</a> | 
+	<h1>WP-CopyProtect <font size="2">ver 2.2.0</font></h1> 
+	| <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank" title="Visit homepage of wordpress plugin WP-CopyProtect">Visit Plugin page</a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donate" target="_blank" title="Donate some amount to WP-CopyProtect plugin developer to help him to develop more such plugins">Donate</a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donors" target="_blank" title="Few power donors,special thanks to them">Power Donors</a> | 
 	<h3>- settings page -</h3>
 <?php
 	if($_POST['CopyProtect_save']){
@@ -174,7 +174,7 @@ function CopyProtect_options_page()
 				<th width="33%" scope="row">Disable text selection:</th> 
 				<td>
 				<input type="checkbox" id="CopyProtect_nts" name="CopyProtect_nts" value="CopyProtect_nts" <?php if($wp_CopyProtect_nts == true) { echo('checked="checked"'); } ?> />
-				Activate. <a href="http://www.thechetan.com/wp-copyprotect/#kp" target="_blank">Not working ?</a>
+				Activate. <a href="http://chetangole.com/blog/wp-copyprotect/#kp" target="_blank">Not working ?</a>
 				</td> 
 			</tr>	
 			<tr valign="top"> 
