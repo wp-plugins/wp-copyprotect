@@ -3,13 +3,13 @@
 Plugin Name: WP-CopyProtect [Protect your blog posts]
 Plugin URI: http://chetangole.com/blog/wp-copyprotect/
 Description: This plug-in will protect your blog content [posts] from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 2.2.0
+Version: 3.0.0
 Author: Chetan Gole
 Author URI: http://chetangole.com/
 */
 
 /*
-Copyright (C) 2012  Chetan Gole - chetangole.com
+Copyright (C) 2013  Chetan Gole - chetangole.com
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -33,7 +33,7 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 <script type="text/javascript">
 <!--
 /******************************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 2.2.0 ****
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 3.0.0 ****
 ******************************************************************************/
 var message="<?php echo $CopyProtect_click_message; ?>";
 function clickIE4(){
@@ -72,7 +72,7 @@ function CopyProtect_no_right_click_without_message()
 <script type="text/javascript">
 <!--
 /******************************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 2.2.0 ****
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 3.0.0 ****
 ******************************************************************************/
 function clickIE4(){
 if (event.button==2){
@@ -106,7 +106,9 @@ function CopyProtect_no_select()
 {
 ?>
 <script type="text/javascript">
-
+/******************************************************************************
+***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 3.0.0 ****
+******************************************************************************/
 function disableSelection(target){
 if (typeof target.onselectstart!="undefined") //For IE 
 	target.onselectstart=function(){return false}
@@ -131,29 +133,30 @@ disableSelection(document.body)
 function CopyProtectCredit()
 {
 ?>
-<small>Copy Protected by <a href="http://chetangole.com/" target="_blank">Chetan</a>s <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-Copyprotect</a>.</small>
+<small>Copy Protected by <a href="http://chetangole.com/" target="_blank">Chetan</a>'s <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-Copyprotect</a>.</small>
 <?php
 }
-// Tuning your WP-CopyProtect
+// Tuning your WP-CopyProtect - The settings page
 function CopyProtect_options_page()
 {
 ?>
-<div class="wrap">
-	<h1>WP-CopyProtect <font size="2">ver 2.2.0</font></h1> 
-	| <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank" title="Visit homepage of wordpress plugin WP-CopyProtect">Visit Plugin page</a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donate" target="_blank" title="Donate some amount to WP-CopyProtect plugin developer to help him to develop more such plugins">Donate</a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donors" target="_blank" title="Few power donors,special thanks to them">Power Donors</a> | 
-	<h3>- settings page -</h3>
+<div class="wrap"><br/>
+	<h1>WP Copy Protect <font size="2">v3.0.0</font></h1>
+	| <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank" title="Visit homepage of wordpress plugin WP-CopyProtect"> Visit Plugin page </a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donate" target="_blank" title="Donate some amount to WP-CopyProtect plugin developer to help him to develop more such plugins"> Donate </a> | <a href="http://chetangole.com/blog/wp-copyprotect/#donors" target="_blank" title="Few power donors,special thanks to them"> Power Donors </a> | <br/><br/>
 <?php
 	if($_POST['CopyProtect_save']){
 		update_option('CopyProtect_nrc',$_POST['CopyProtect_nrc']);
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
 		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
 		update_option('CopyProtect_credit',$_POST['CopyProtect_credit']);
+		update_option('CopyProtect_user_setting',$_POST['CopyProtect_user_setting']);
 
 		echo '<div class="updated"><p>Settings saved</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
 	$wp_CopyProtect_credit = get_option('CopyProtect_credit');
+	$wp_CopyProtect_user_setting = get_option('CopyProtect_user_setting');
 	?>
 	<form method="post" id="CopyProtect_options">
 		<fieldset class="options">
@@ -164,7 +167,7 @@ function CopyProtect_options_page()
 				<input type="radio" name="CopyProtect_nrc" value="0" <?php if($wp_CopyProtect_nrc == 0) echo('checked'); ?> />
 				Do not disable right click.<br />
 				<input type="radio" name="CopyProtect_nrc" value="1" <?php if($wp_CopyProtect_nrc == 1) echo('checked'); ?> />
-				Disable right click, no message.<br />
+				Disable right click and do no show any message.<br />
 				<input type="radio" name="CopyProtect_nrc" value="2" <?php if($wp_CopyProtect_nrc == 2) echo('checked'); ?> />
 				Disable right click and show message :
 				<input name="CopyProtect_nrc_text" type="text" id="CopyProtect_nrc_text" value="<?php echo get_option('CopyProtect_nrc_text') ;?>" size="30"/>
@@ -183,7 +186,18 @@ function CopyProtect_options_page()
 				<input type="checkbox" id="CopyProtect_credit" name="CopyProtect_credit" value="CopyProtect_credit" <?php if($wp_CopyProtect_credit == true) { echo('checked="checked"'); } ?> />
 				Activate.
 				</td> 
-			</tr>				
+			</tr>	
+			<tr valign="top"> 
+				<th width="33%" scope="row">User Setting:</th> 
+				<td>
+				<input type="radio" name="CopyProtect_user_setting" value="0" <?php if($wp_CopyProtect_user_setting == 0) echo('checked'); ?> />
+				Exclude admin users.<br />
+				<input type="radio" name="CopyProtect_user_setting" value="1" <?php if($wp_CopyProtect_user_setting == 1) echo('checked'); ?> />
+				Exclude all logged-in users.<br />
+				<input type="radio" name="CopyProtect_user_setting" value="2" <?php if($wp_CopyProtect_user_setting == 2) echo('checked'); ?> />
+				Apply settings to all users.
+				</td> 
+			</tr> 			
 		<tr>
         <th width="33%" scope="row">Save settings :</th> 
         <td>
@@ -194,15 +208,14 @@ function CopyProtect_options_page()
         <th scope="row" style="text-align:right; vertical-align:top;">
         <td>
 		<h3>Whats next ?</h3>
-		<p>Why don't you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
+		<p>Why dont you <a href="/wp-admin/post-new.php">write a post</a> about <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-CopyProtect</a> ?</p>
 		<h3>Problems, Questions, Suggestions ?</h3>
-		<p>Send me mail via: <a href="http://chetangole.com/blog/wp-copyprotect/" target="_blank">WP-CopyProtect Homepage</a></p>
+		<p>Send me an e-mail via: <a href="http://chetangole.com/blog/contact/" target="_blank">contact page</a></p>
+		<h3>Thank you</h3>
+		<p>Plug-in developed by <a href="http://chetangole.com/" target="_blank">Chetan Gole</a>.</p>
         </td>
         </tr>
 		</table>
-		<h3>Thank you</h3>
-		Plug in developed by <a href="http://chetangole.com/blog/" target="_blank">Chetan Gole</a>. <br />
-		<small>Follow me on Twitter <a href="http://twitter.com/_techie" target="_blank">@_techie</a></small>
 		</fieldset>
 	</form>
 	</table>
@@ -219,10 +232,25 @@ function CopyProtect()
 	$wp_CopyProtect_credit = get_option('CopyProtect_credit');
 	$pos = strpos(strtolower(getenv("REQUEST_URI")), '?preview=true');
 	
-	if ($pos === false) {
+	if ($pos === false && ToApplySettings()) {
 		if($wp_CopyProtect_nrc == 1) { CopyProtect_no_right_click_without_message(); }
 		if($wp_CopyProtect_nrc == 2) { CopyProtect_no_right_click($wp_CopyProtect_nrc_text); }
 		if($wp_CopyProtect_nts == true) { CopyProtect_no_select(); }
+	}
+}
+
+function ToApplySettings(){
+	$wp_CopyProtect_user_setting = get_option('CopyProtect_user_setting');
+	
+	if($wp_CopyProtect_user_setting == 0 && current_user_can('level_10'))
+	{
+		return false;
+	}else if ($wp_CopyProtect_user_setting == 1 && is_user_logged_in()) {
+		return false;
+	}else if ($wp_CopyProtect_user_setting == 2) {
+		return true;
+	}else{
+		return true;
 	}
 }
 
@@ -231,8 +259,10 @@ function CopyProtect_footer()
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
 	$wp_CopyProtect_credit = get_option('CopyProtect_credit');
 
-	if($wp_CopyProtect_nts == true) { CopyProtect_no_select_footer(); }
-	if($wp_CopyProtect_credit == true) { CopyProtectCredit(); }
+	if(ToApplySettings()){
+		if($wp_CopyProtect_nts == true) { CopyProtect_no_select_footer(); }
+		if($wp_CopyProtect_credit == true) { CopyProtectCredit(); }
+	}
 }
 
 function CopyProtect_adminmenu()
@@ -245,5 +275,11 @@ function CopyProtect_adminmenu()
 //Commanding the Wordpress
 add_action('wp_head','CopyProtect');
 add_action('wp_footer','CopyProtect_footer');
-add_action('admin_menu','CopyProtect_adminmenu',1);
+
+add_action( 'admin_menu', 'register_wp_copyprotect_menu' );
+
+function register_wp_copyprotect_menu(){
+    add_menu_page( 'WP Copy Protect', 'WP Copy Protect', 'manage_options', 'wpcopyprotect', 'CopyProtect_options_page', '', '2.5467' ); 
+}
+
 ?>
