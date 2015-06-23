@@ -4,7 +4,7 @@ Donate link: http://chetangole.com/blog/wp-copyprotect/#donate
 Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security, wp-copyprotect, RSS, fetcher, duplicate, Bing, 
 Requires at least: 2
 Tested up to: 4.2
-Stable tag: 3.0.0
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,8 @@ Catch me on [Wp-CopyProtect Homepage](http://chetangole.com/blog/wp-copyprotect/
 1. Configuration page
 
 == Changelog ==
+= ver : 3.1.0 =
+ 1. Sanitising user input for protection. Avoiding XSS attacks. Reference: https://codex.wordpress.org/Function_Reference/sanitize_text_field
 = ver : 3.0.0 = 
  1. Added user specific setting, now you can disable WP Copy Protect for admin/logged-in users. 
  2. Moved menu to top level. 

@@ -3,13 +3,13 @@
 Plugin Name: WP-CopyProtect [Protect your blog posts]
 Plugin URI: http://chetangole.com/blog/wp-copyprotect/
 Description: This plug-in will protect your blog content [posts] from being copied. A simple plug-in developed to stop the Copy cats.
-Version: 3.0.0
+Version: 3.1.0
 Author: Chetan Gole
 Author URI: http://chetangole.com/
 */
 
 /*
-Copyright (C) 2013  Chetan Gole - chetangole.com
+Copyright (C) 2015  Chetan Gole - chetangole.com
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -33,7 +33,7 @@ function CopyProtect_no_right_click($CopyProtect_click_message)
 <script type="text/javascript">
 <!--
 /******************************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 3.0.0 ****
+***   COPY PROTECTED BY http://chetangole.com/blog/wp-copyprotect/   version 3.1.0 ****
 ******************************************************************************/
 var message="<?php echo $CopyProtect_click_message; ?>";
 function clickIE4(){
@@ -72,7 +72,7 @@ function CopyProtect_no_right_click_without_message()
 <script type="text/javascript">
 <!--
 /******************************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 3.0.0 ****
+***   COPY PROTECTED BY http://chetangole.com/blog/wp-copyprotect/   version 3.1.0 ****
 ******************************************************************************/
 function clickIE4(){
 if (event.button==2){
@@ -107,7 +107,7 @@ function CopyProtect_no_select()
 ?>
 <script type="text/javascript">
 /******************************************************************************
-***   COPY PROTECTED BY CHETANGOLE.COM/BLOG/WP-COPYPROTECT   version 3.0.0 ****
+***   COPY PROTECTED BY http://chetangole.com/blog/wp-copyprotect/   version 3.1.0 ****
 ******************************************************************************/
 function disableSelection(target){
 if (typeof target.onselectstart!="undefined") //For IE 
@@ -147,11 +147,11 @@ function CopyProtect_options_page()
 	if($_POST['CopyProtect_save']){
 		update_option('CopyProtect_nrc',$_POST['CopyProtect_nrc']);
 		update_option('CopyProtect_nts',$_POST['CopyProtect_nts']);
-		update_option('CopyProtect_nrc_text',$_POST['CopyProtect_nrc_text']);
+		update_option('CopyProtect_nrc_text', sanitize_text_field($_POST['CopyProtect_nrc_text']));
 		update_option('CopyProtect_credit',$_POST['CopyProtect_credit']);
 		update_option('CopyProtect_user_setting',$_POST['CopyProtect_user_setting']);
 
-		echo '<div class="updated"><p>Settings saved</p></div>';
+		echo '<div class="updated"><p>Settings saved, Please clear/update cache if you are using any cache plugin</p></div>';
 	}
 	$wp_CopyProtect_nrc = get_option('CopyProtect_nrc');
 	$wp_CopyProtect_nts = get_option('CopyProtect_nts');
